@@ -5,7 +5,7 @@ Add to `.repo/local_manifests/kenzo.xml`:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<project path="device/xiaomi/kenzo" name="android_device_xiaomi_kenzo" remote="TeamWin" revision="android-7.1" />
+	<project path="device/xiaomi/kenzo" name="dadi11/android_device_xiaomi_kenzo" remote="github" revision="twrp-kenzo" />
 </manifest>
 ```
 
