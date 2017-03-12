@@ -1,4 +1,4 @@
-## TWRP device tree for Xiaomi Redmi Note 3 and Xiaomi Redmi Note 3 Special Edition (kenzo/kate)
+## TWRP device tree for Xiaomi Redmi Note 3 (kenzo)
 
 Add to `.repo/local_manifests/kenzo.xml`:
 
