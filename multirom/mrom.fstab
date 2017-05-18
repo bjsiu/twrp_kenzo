@@ -1,8 +1,8 @@
-/boot       emmc        /dev/block/mmcblk0p37
-/recovery   emmc        /dev/block/mmcblk0p38
-/system     ext4        /dev/block/mmcblk0p53
-/data       f2fs        /dev/block/mmcblk0p54
-/cache      ext4        /dev/block/mmcblk0p52
+/boot       emmc        /dev/block/mmcblk0p21
+/recovery   emmc        /dev/block/mmcblk0p22
+/system     ext4        /dev/block/mmcblk0p24
+/data       f2fs        /dev/block/mmcblk0p46
+/cache      ext4        /dev/block/mmcblk0p25
 /persist    ext4        /dev/block/mmcblk0p30
 /firmware   vfat        /dev/block/mmcblk0p19
 
