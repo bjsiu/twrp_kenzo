@@ -47,9 +47,11 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+TARGET_USES_ION := true
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_QCOM_RTC_FIX := true
@@ -61,6 +63,7 @@ TW_EXCLUDE_SUPERSU := true
 TW_INCLUDE_NTFS_3G := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_IGNORE_MISC_WIPE_DATA := true
+TW_NEW_ION_HEAP := true
 
 # Asian region languages
 TW_EXTRA_LANGUAGES := true
@@ -69,6 +72,38 @@ TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_CRYPTO := true
 TARGET_HW_DISK_ENCRYPTION := true
 TARGET_KEYMASTER_WAIT_FOR_QSEE := true
+TW_UNMOUNT_FIRMWARE_ON_BOOT := true
 
 # Debug flags
 TWRP_INCLUDE_LOGCAT := true
+
+TARGET_RECOVERY_IS_MULTIROM := true
+MR_INPUT_TYPE := type_b
+MR_NO_KEXEC := 2
+MR_ALLOW_NKK71_NOKEXEC_WORKAROUND := true
+MR_CONTINUOUS_FB_UPDATE := true
+MR_INIT_DEVICES := device/xiaomi/kenzo/multirom/mr_init_devices.c
+MR_DPI := xhdpi
+MR_DPI_FONT := 340
+MR_USE_MROM_FSTAB := true
+MR_FSTAB := device/xiaomi/kenzo/recovery.fstab
+MR_KEXEC_MEM_MIN := 0x0
+MR_DEVICE_HOOKS := device/xiaomi/kenzo/multirom/mr_hooks.c
+MR_DEVICE_HOOKS_VER := 4
+MR_DEVICE_VARIANTS := kenzo HMNOTE3
+MR_PIXEL_FORMAT := "RGBX_8888"
+# MR_ENCRYPTION := true
+# MR_ENCRYPTION_SETUP_SCRIPT := device/xiaomi/kenzo/multirom/mr_cp_crypto.sh
+# MR_ENCRYPTION_FAKE_PROPERTIES := true
+MR_USE_QCOM_OVERLAY := true
+MR_QCOM_OVERLAY_HEADER := device/xiaomi/kenzo/multirom/mr_qcom_overlay.h
+MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
+MR_DEV_BLOCK_BOOTDEVICE := true
+MR_POPULATE_BY_NAME_PATH := "/dev/block/bootdevice/by-name"
+
+# MultiRom Recovery Version
+include device/xiaomi/kenzo/multirom/MR_REC_VERSION.mk
+ifeq ($(MR_REC_VERSION),)
+MR_REC_VERSION := $(shell date -u +%Y%m%d)-01
+endif
+BOARD_MKBOOTIMG_ARGS += --board mrom$(MR_REC_VERSION)
