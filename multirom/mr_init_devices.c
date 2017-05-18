@@ -36,8 +36,12 @@ const char *mr_init_devices[] =
     "/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0",
     "/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001",
     "/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0",
-    "/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p24", // system
-    "/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p46", // userdata
+    
+"/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p24", 
+// system
+    
+"/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p46", 
+// userdata
     "/sys/bus/mmc*",
     "/sys/bus/mmc/drivers/mmcblk",
     "/sys/module/mmc_core",

@@ -64,6 +64,7 @@ TW_INCLUDE_NTFS_3G := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_IGNORE_MISC_WIPE_DATA := true
 TW_NEW_ION_HEAP := true
+TW_TARGET_USES_QCOM_BSP := true
 
 # Asian region languages
 TW_EXTRA_LANGUAGES := true
@@ -86,7 +87,7 @@ MR_INIT_DEVICES := device/xiaomi/kenzo/multirom/mr_init_devices.c
 MR_DPI := xhdpi
 MR_DPI_FONT := 340
 MR_USE_MROM_FSTAB := true
-MR_FSTAB := device/xiaomi/kenzo/recovery.fstab
+MR_FSTAB := device/xiaomi/kenzo/multirom/mrom.fstab
 MR_KEXEC_MEM_MIN := 0x0
 MR_DEVICE_HOOKS := device/xiaomi/kenzo/multirom/mr_hooks.c
 MR_DEVICE_HOOKS_VER := 4
@@ -100,6 +101,8 @@ MR_QCOM_OVERLAY_HEADER := device/xiaomi/kenzo/multirom/mr_qcom_overlay.h
 MR_QCOM_OVERLAY_CUSTOM_PIXEL_FORMAT := MDP_RGBX_8888
 MR_DEV_BLOCK_BOOTDEVICE := true
 MR_POPULATE_BY_NAME_PATH := "/dev/block/bootdevice/by-name"
+NEW_ION_HEAP := true
+MR_QCOM_OVERLAY_HEAP_ID_MASK := 1
 
 # MultiRom Recovery Version
 include device/xiaomi/kenzo/multirom/MR_REC_VERSION.mk
