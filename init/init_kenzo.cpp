@@ -41,13 +41,11 @@ void vendor_load_properties()
 		property_set("ro.product.model", "Redmi Note 3 Special Edition");
 		property_set("ro.product.device", "kate");
 		property_set("ro.build.description", "kate-user 6.0.1 MMB29M V8.1.6.0.MHOMIDI release-keys");
-		property_set("ro.build.fingerprint", "Xiaomi/kate/kate:6.0.1/MMB29M/V8.1.6.0.MHOMIDI:user/release-keys");
 	}
 	/* default to Redmi Note 3 */
 	else {
 		property_set("ro.product.model", "Redmi Note 3");
 		property_set("ro.product.device", "kenzo");
 		property_set("ro.build.description", "kenzo-user 6.0.1 MMB29M V8.1.6.0.MHOMIDI release-keys");
-		property_set("ro.build.fingerprint", "Xiaomi/kenzo/kenzo:6.0.1/MMB29M/V8.1.6.0.MHOMIDI:user/release-keys");
 	}
 }
